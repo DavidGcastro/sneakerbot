@@ -1,0 +1,31 @@
+{
+  "name": "sneakerbot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DavidGcastro/sneakerbot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DavidGcastro/sneakerbot/issues"
+  },
+  "homepage": "https://github.com/DavidGcastro/sneakerbot#readme",
+  "dependencies": {
+    "node-base64-image": "^2.0.1",
+    "puppeteer": "^5.2.1",
+    "puppeteer-extra": "^3.1.15",
+    "puppeteer-extra-plugin-recaptcha": "^3.1.17",
+    "puppeteer-extra-plugin-stealth": "^2.6.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.9.0",
+    "eslint-config-google": "^0.14.0"
+  }
+}
