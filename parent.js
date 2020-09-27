@@ -3,7 +3,10 @@ const {fork} = require('child_process');
 const path = require('path');
 const cores = require('os').cpus().length;
 const fs = require('fs');
-const adapters = fs.readdirSync('./vendorAdapters');
+let  adapters = fs.readdirSync('./vendorAdapters');
+const disabledVendors = require('./disabledAdapters');
+var schedule = require('node-schedule');
+adapters = adapters.filter(vendor => disabledVendors.indexOf(vendor.substring(0, vendor.length - 3)) === -1);
 let childIndex = 0;
 const init = () => {
 	while(childIndex < cores && childIndex < adapters.length) {
@@ -21,4 +24,7 @@ const init = () => {
 	}
 };
 
-init();
+const job = schedule.scheduleJob({ hour: 21, minute: 23, dayOfWeek: 6 }, function () {
+	init();
+	job.cancel();
+});
