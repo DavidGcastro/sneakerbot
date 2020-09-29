@@ -24,7 +24,9 @@ const init = () => {
 	}
 };
 
-const job = schedule.scheduleJob({ hour: 21, minute: 23, dayOfWeek: 6 }, function () {
-	init();
-	job.cancel();
-});
+// const job = schedule.scheduleJob({ hour: 21, minute: 23, dayOfWeek: 6 }, function () {
+// 	init();
+// 	job.cancel();
+// });
+
+init();

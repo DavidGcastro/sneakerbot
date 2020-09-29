@@ -9,4 +9,8 @@ module.exports = {
 	addToCartIdentifier : 'input[name="submit.add-to-cart"]',
 	cartURL: 'https://www.amazon.com/gp/cart/view.html?ref_=nav_cart',
 	checkoutURL : 'https://www.amazon.com/gp/buy/spc/handlers/display.html',
+	checkoutIdentIdentifier: '[data-feature-id="proceed-to-checkout-action"]',
+	multistepLogin: true,
+	loginAtCheckout: true,
+	submitPaymentIdentifier: 'input[name=placeYourOrder1]',
 };
